@@ -1,10 +1,15 @@
 Chapter talks about tokenization and embedding.
 
 <h1> Tokenization </h1>
+
 * The process of breaking text into chunks called tokens is called tokenization.
+  
 * Different LLMs have different tokenizers, and the output of that tokenizer is fed to the model for training, so model can only use the tokenizer it was trained for.
+  
 * There are 3 major algorithms to train tokenizers: Byte Pair Encoding (BPE) (most popular, used in GPT models), WordPiece (used in BERT), SentencePiece
+  
 * Tokenization can be at character level, word level, subword level and byte level.
+  
 * Main parameters to train tokenizers are: vocabulory size (hyperparameter), training dataset, special tokens (to handle class, unknown word, mask, <|assistant|>, <|end-of-text|>  etc)
 
 <h2> Different Types of Tokens </h2>
