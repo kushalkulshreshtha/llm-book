@@ -43,3 +43,6 @@ Chapter talks about tokenization and embedding.
 
 <h2> Different Types of Tokenization Algorithms </h2>
 
+* Source: https://huggingface.co/docs/transformers/tokenizer_summary
+  
+
