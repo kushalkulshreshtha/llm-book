@@ -68,9 +68,48 @@ Chapter talks about tokenization and embedding.
 * Primarily used for languages like Chinese where word are not separated by space. Space is included as yet another token and then BPE or WordPiece is applied to combine characters.
 
 # TODO:
-* Embedding
+* Embedding (Added below)
   * Static vs contextual
   * NN model for embedding generation using microsoft deberta
 * Word2Vec
 * Training word2vec from scratch (add appendix page referring to d2l book)
 * Word2Vec for music recommendation (training from scratch using gensim): https://colab.research.google.com/drive/1TvrjJ-bG6AVL8FmBXKXTgV8XB_VsVz1U?usp=sharing
+
+# Embedding: 
+* Representing objects in the mathematical form that captures relationship in data is referred as embedding
+* Static Embedding: As the name suggests, the representation of words relative to each other is fixed and doesn't regardless of change in context. E.g. Embedding done by Word2Vec Model.
+* Contextual Embedding: Representation of the words can change w.r.t context. E.g. In models like BERT the work 'bank' will have multiple representation depending on the context it is leveraged
+
+* Word2Vec Model: 
+1. Tokenization: Input words are broken down into tokens E.g. "I love pizza" ['I', 'love', 'pizza']
+2. Respective tokens are then mapped with the token Id's, which contains mapping for respective embedding(intiallized randomly)
+3. The large word corpus then learns relationship using either of two outputs i.e. CBOW (predicting next word) or Skipgrams (Predicting context given word)
+4. Core idea is word having similar meaning or often appearing in similar context in the training data would be closer to each other, while the one's that won't appear farther
+5. End output is a static vector representation of tokens in a multidimensional space that can be further leveraged to tasks like similarity computation or clustering
+
+* Text Embdedding
+* Unlike word embedding text embedding represents the entire sentence as a single vector representation
+* Most common way of text embedding is to average the values of individual tokens the sentence holds, however this methods are too simplistic and can lose of semantic information
+* Specialised Models like Sentence BERT or Universal Sentence Encoder can be trained on sentence level tasks to perform accurate and context aware embedddings effectively capturing relationship within the text
+
+**Training a Word2Vec Model from scratch**
+1. Word2Vec models are often trained using a Neural Networks with series of examples generated from running text
+2. How are the examples generated ? This is done using a sliding window that breaks the longer sentence into various chunks of fixed length
+3. E.g. I went to the office but returned late as there was more work. Assuming the sliding window of size 5 the first chunk would be "I went to the office".
+4. Assuming the center word "the" as a input word we can generate 4 pairs
+5. We would next train a classification model to predict if two words appear closer to each other.
+6. One flaw here would be since all the samples added to the data would be from the chunks created using sliding, all the outputs will be one i.e. positive samples
+7. Hence we need to add Negative samples to the training data to make it more usable
+8. Negative sanmples can be generated randomly combinng words that don't appear together in the input sentences
+9. Method of selcting neighbor words is called as skipgrams and adding random words is called as negative sampling
+10. Hence this way we can generate milllions of training examples from the running text
+11. Before training a NN Model we now need to wisely chose the embeeding technique that takes care of special tokens and captilization
+12. Model is then trained with various training examples and depending on if the two words appear closer to each other or not model predicts the output score
+13. Model adjust word embedding depedning on the output of the two words in the training examples
+
+
+  
+
+
+
+
