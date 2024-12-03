@@ -7,6 +7,7 @@ Chapter talks about tokenization and embedding.
 * There are 3 major algorithms to train tokenizers: Byte Pair Encoding (BPE) (most popular, used in GPT models), WordPiece (used in BERT), SentencePiece
 * Tokenization can be at character level, word level, subword level and byte level.
 * Main parameters to train tokenizers are: vocabulory size (hyperparameter), training dataset, special tokens (to handle class, unknown word, mask, <|assistant|>, <|end-of-text|>  etc)
+* Training dataset is important to capture the patters of the language. For eg. a tokenizer to code python will be different from a tokenizer for English language. The difference may come in the way tokens are trained. For eg. 4 spaces might be a separate token in Python language but not in English language
 
 <h2> Different Types of Tokens </h2>
 <h3> Character Level</h3>
@@ -58,3 +59,18 @@ Chapter talks about tokenization and embedding.
 
 * It is very similar to BPE: first breaks down text into individual tokens.
 * However, the merging trick is differente from BPE. It merges on the based on probability of the data, not on the frequency.
+  * It means that it tries to maximize the likelihood of the occurence of the training data
+  * That is, it finds the character pair whose probability divided by the probability of first symbol followed by second symbol is highest in the data.
+  * For example, it will merge if the P('ug')/P('u','g') is higher than all other merges possible.
+
+<h3> Sentence Piece </h3>
+
+* Primarily used for languages like Chinese where word are not separated by space. Space is included as yet another token and then BPE or WordPiece is applied to combine characters.
+
+# TODO:
+Embedding
+  Static vs contextual
+  NN model for embedding generation using microsoft deberta
+Word2Vec
+Training word2vec from scratch (add appendix page referring to d2l book)
+Word2Vec for music recommendation (training from scratch using gensim): https://colab.research.google.com/drive/1TvrjJ-bG6AVL8FmBXKXTgV8XB_VsVz1U?usp=sharing
