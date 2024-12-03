@@ -29,7 +29,7 @@ Chapter talks about tokenization and embedding.
 
 <h3> Byte Level</h3>
 
-* Breaks down tokens into individual bytes
+* Breaks down tokens into individual bytes (1s and 0s)
 * Some tokenizers like GPT Tokenizers use subword + bytes as a fallback mechanism in case they find something they do not know how to represent.
 
 <h2> Different Types of Tokenizers </h2>
@@ -44,5 +44,14 @@ Chapter talks about tokenization and embedding.
 <h2> Different Types of Tokenization Algorithms </h2>
 
 * Source: https://huggingface.co/docs/transformers/tokenizer_summary
-  
+<h3> Byte Pair Encoding (BPE) <h3>
+* In the first step, we compute the frequency of each word in the text. for eg ['bun':10, 'pun': 15, 'pug': 10, 'hug': 20, 'hugs':10]
+* Now, the vocab is broken into singular characters: [('b' 'u' 'n', 10), ('p' 'u' 'n', 15), ('p' 'u' 'g', 10), ('h' 'u' 'g', 20), ('h' 'u' 'g' 's', 10)]
+* Individual characters are combined based on their frequency: 'bu' occurs 10 times in 'bun' and 20 times in 'bug', so total frequency of 'bu' is 30. Similarly the possible combinations are: {'bu': 30, 'un': 25, 'pu': 25, 'ug': 40, 'hu': 30, 'gs': 10}. In this example, we now combine 'ug' into single token. 
+* Now the vocab is: [('b' 'u' 'n', 10), ('p' 'u' 'n', 15), ('p' 'ug', 10), ('h' 'ug', 20), ('h' 'ug' 's', 10)]
+* Repeat this process again:  {'bu': 30, 'un': 25, 'pu': 25, 'pug': 10, 'hug': 30, 'ugs': 10}. Now combine 'bu' (or 'hug') to form a token.
+* Repeat until the desired vocabulary length is reached.
 
+<h3> Word Piece <h3>
+* It is very similar to BPE: first breaks down text into individual tokens.
+* However, the merging trick is differente from BPE. It merges on the based on probability of the data, not on the frequency.
