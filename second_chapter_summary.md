@@ -68,9 +68,9 @@ Chapter talks about tokenization and embedding.
 * Primarily used for languages like Chinese where word are not separated by space. Space is included as yet another token and then BPE or WordPiece is applied to combine characters.
 
 # TODO:
-Embedding
-  Static vs contextual
-  NN model for embedding generation using microsoft deberta
-Word2Vec
-Training word2vec from scratch (add appendix page referring to d2l book)
-Word2Vec for music recommendation (training from scratch using gensim): https://colab.research.google.com/drive/1TvrjJ-bG6AVL8FmBXKXTgV8XB_VsVz1U?usp=sharing
+* Embedding
+  * Static vs contextual
+  * NN model for embedding generation using microsoft deberta
+* Word2Vec
+* Training word2vec from scratch (add appendix page referring to d2l book)
+* Word2Vec for music recommendation (training from scratch using gensim): https://colab.research.google.com/drive/1TvrjJ-bG6AVL8FmBXKXTgV8XB_VsVz1U?usp=sharing
