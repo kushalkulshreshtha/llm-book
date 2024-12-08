@@ -11,7 +11,7 @@ Few things to note -
 
 Archeticture of transformer invovles various components and various steps till the final output is produced
 1. **Tokenization**: Process of breaking the input prompt in indiviudal tokens is called as tokenization. E.g. "I like playing video games", ["I", "like", "play", "ing", "games']
-2. **Embedding**: Generated tokens are then mapped to respective toke_id's which esseentially maps to the encoding associated repsective tokens. These emebeedings are learned by the model
+2. **Embedding**: Generated token_id's are then mapped to the respective embedding
    during the trainding phase.
 3. **Positional Encoding**: Tokens within the transformer architecture are processed in parallel hence in order to preserve the semenatic relationship and keep the output meanigful.
    The way positional encoding works is tokens appearing close to each other would have more simialr embeddings compared to the one appearing far. Some of th initial day transformers used
