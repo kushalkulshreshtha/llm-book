@@ -42,7 +42,7 @@ Chapter talks about tokenization and embedding.
 * Galactica: Science based tokenizer, spl tokens for references
 * Phi3 and Llama2: Vocab: 32,000 (BPE)
 
-* BERT cased vs uncased and where to use:
+<h3> BERT cased vs uncased and where to use: </h3>
   * Cased is used in tasks where case is important like Named Entity Recognition. For eg. Apple as a company is different from apple as a fruit, this sentence needs a case to understand what we are talking about.
   * Uncased should be used in tasks like sentiment analysis where case is not important. 
 
