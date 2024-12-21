@@ -22,6 +22,9 @@ and many more including ChatGPT and Gemini
 
 **Limitation**
 A. Final representation is just a bag of word without any sementaic meaning E.g. "Tiger ate rabbit" and "Rabbit ate tiger" would essentially be the same sentences
+B. Introduces high dimensional (dimension = dicrtionary size) sparse vectors.
+C. Does not capture semantics (cosine similarity between 2 word vectors will always be 0).
+D. Similar words are treated differently (tiger and tigers are similar but will be totally different in representation)
 
 2. **Word2Vec**: It is a NN based model that represents tokens in the high multidimensional space in the form of vector. Words having similar meaning or that appear together in similar context usually are closer to each other compared to the ones 
    that have very different meaning or don't appear toghther often
