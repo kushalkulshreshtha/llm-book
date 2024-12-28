@@ -1,4 +1,4 @@
-Text Clustering
+## Text Clustering
 
 Overview
 
@@ -8,7 +8,7 @@ Example Dataset
 
 We use a dataset containing abstracts from various research papers. Clustering these abstracts helps us identify common themes or topics across the dataset.
 
-Process
+### Process
 
 Step 1: Generate Embeddings
 
