@@ -79,4 +79,7 @@ Modern day transformer uses advanced tenchniques like flash attention to further
 * Multiple improvements have been done in the transformer since their inception in 2017:
    * Local/ Sparse attention: Local attention means the attention block attends to only a few tokens instead of all tokens. Models like GPT-3 use alternate global and local attention blocks to speed up training while maintaining good accuracy.
    * Flash Attention: Algorithm for attention remains the same, but the calculation is optimized from GPU side using some tricks around what comes in and out of GPU memory.
-   * 
+   * Positional embeddings: Previously the models had used either the global positional embeddings which would encode the position of the token, or learnable positional embeddings. However, we may want to concat multiple documents instead of padding them for more optimized performance during training. RoPE (or Rotary Positional embeddings) help mitigate that issue.
+   * Grouped query attention
+   * Caching keys and values
+   * Architectual changes: like Normalization before Feed forward, SwigLU instead of ReLU, RMSNorm instead of LayerNorm
