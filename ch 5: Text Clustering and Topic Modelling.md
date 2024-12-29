@@ -27,10 +27,10 @@ Initialization:
 Assumes each data point starts as its own cluster.
 
 Building the Hierarchy:
-A. Combines data points into clusters using a bottom-up approach.
-B. Points are merged based on the maximum reachability distance.
-C. Maximum Reachability Distance: Defined as the maximum of the core distance and the distance between two points.
-D. Core Distance: The distance between a given point and its Nth nearest neighbor, where N is specified as MinPts (minimum points).
-E. Cluster Pruning: Clusters are pruned based on their stability.
-F. Stability: Determined by varying thresholds of λ (lambda), which is the inverse of the core distance
-G. Clusters that consistently appear across varying thresholds are considered stable, reaffirming their existence.
+A. Combines data points into clusters using a bottom-up approach </br>
+B. Points are merged based on the maximum reachability distance. </br>
+C. Maximum Reachability Distance: Defined as the maximum of the core distance and the distance between two points. </br>
+D. Core Distance: The distance between a given point and its Nth nearest neighbor, where N is specified as MinPts (minimum points). </br>
+E. Cluster Pruning: Clusters are pruned based on their stability. </br>
+F. Stability: Determined by varying thresholds of λ (lambda), which is the inverse of the core distance </br>
+G. Clusters that consistently appear across varying thresholds are considered stable, reaffirming their existence </br>
