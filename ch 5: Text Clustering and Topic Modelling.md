@@ -51,6 +51,10 @@ Classical technqiues such as Latent Dirichlet allocation (baed on probability of
 9. This way the words that appear in only specific clusters will have lower value of denominator i.e. Cf and words appearing very commonly will have higher denominator and lower      value of IDF.
 10. As also mentioned eariler each step in the BERTopic Modelling is modular and can be replaced depending on the choice. E.g. the nlper/gte-small sentence tokenizer can be replaced with various other availabe, same is true for clustering algorithm used </br>
 
+![image](https://github.com/user-attachments/assets/fdd859f5-3810-4ae6-b126-8a18b1622f07)
+
+Read more at:[link](https://maartengr.github.io/BERTopic/getting_started/ctfidf/ctfidf.html)
+
 **Limitations**
 1. One of the limitations of the BERTopic Modelling involves that the end output i.e. topics are charecterized and represented by a bag of words </br>
 
