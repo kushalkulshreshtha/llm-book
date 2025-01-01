@@ -53,7 +53,7 @@ Classical technqiues such as Latent Dirichlet allocation (baed on probability of
 
 ![image](https://github.com/user-attachments/assets/fdd859f5-3810-4ae6-b126-8a18b1622f07)
 
-Read more at:[link](https://maartengr.github.io/BERTopic/getting_started/ctfidf/ctfidf.html)
+Read more at: [link](https://maartengr.github.io/BERTopic/getting_started/ctfidf/ctfidf.html)
 
 **Limitations**
 1. One of the limitations of the BERTopic Modelling involves that the end output i.e. topics are charecterized and represented by a bag of words </br>
