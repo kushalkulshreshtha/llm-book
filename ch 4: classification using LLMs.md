@@ -19,6 +19,7 @@ It can be done using a  model fine-tuned for classification or generic embedding
 
 ![Using fine-tuned model to do classification](https://github.com/user-attachments/assets/e752b37b-5eb8-4069-ba31-d973d0e32e60)
 
+<img src="https://github.com/user-attachments/assets/e752b37b-5eb8-4069-ba31-d973d0e32e60" width="48" height="48">
 <h3> Using Embedding Model </h3>
 
 We can utilize this in two different ways: 
