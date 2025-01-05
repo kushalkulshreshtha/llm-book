@@ -17,7 +17,7 @@ It can be done using a  model fine-tuned for classification or generic embedding
 * Model might be trained on a totally different dataset though (like tweets) whereas we might be doing sentiment analysis for movie reviews. Hence model selection is important.
 * Model directly outputs the class
 
-<img src="https://github.com/user-attachments/assets/e752b37b-5eb8-4069-ba31-d973d0e32e60" width="500" height="360">
+<img src="https://github.com/user-attachments/assets/e752b37b-5eb8-4069-ba31-d973d0e32e60" width="600" height="360">
 
 <h3> Using Embedding Model </h3>
 
@@ -34,7 +34,7 @@ We can utilize this in two different ways:
 * Use embeddings as feature and label as output to train a classifier.
 * Use this classifier to predict.
 
-<img src="https://github.com/user-attachments/assets/c13fad2b-5320-420a-bf71-0f0806b109e2" width="600" height="360">
+<img src="https://github.com/user-attachments/assets/c13fad2b-5320-420a-bf71-0f0806b109e2" width="500" height="360">
 
 <h4> Zero-shot Classification </h4>
 
