@@ -34,7 +34,7 @@ We can utilize this in two different ways:
 * Use embeddings as feature and label as output to train a classifier.
 * Use this classifier to predict.
 
-<img src="https://github.com/user-attachments/assets/c13fad2b-5320-420a-bf71-0f0806b109e2" width="500" height="360">
+<img src="https://github.com/user-attachments/assets/c13fad2b-5320-420a-bf71-0f0806b109e2" width="550" height="360">
 
 <h4> Zero-shot Classification </h4>
 
@@ -42,7 +42,9 @@ We can utilize this in two different ways:
 * Generate embeddings for the sentences (for eg. The movie was amazing). Let's call them e1
 * Generate embeddings for the positive and negative classes (for eg. 'a positive review' and 'a negative review'). Lets call them e2 and e3 respectively.
 * Calculate cosine similarity of sentences with classes and compare. cosine(e1.e2) / cosine(e1.e3). The class with a higher cosine similarity score is our target class.
-* **TODO: Add code examples**
+
+<img src="https://github.com/user-attachments/assets/fffc76de-3cf3-4cb9-954b-73e1c5b2cc9b" width="600" height="360">
+
   
 <h2> Classification using text generation models </h2>
 
