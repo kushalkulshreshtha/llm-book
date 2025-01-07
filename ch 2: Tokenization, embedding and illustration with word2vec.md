@@ -45,7 +45,8 @@ Chapter talks about tokenization and embedding.
 <h3> BERT cased vs uncased and where to use: </h3>
 
   * Cased is used in tasks where case is important like Named Entity Recognition. For eg. Apple as a company is different from apple as a fruit, this sentence needs a case to understand what we are talking about.
-  * Uncased should be used in tasks like sentiment analysis where case is not important. 
+  * Uncased should be used in tasks like sentiment analysis where case is not important.
+  * If unsure about the use always its easy to start with uncased model given it's robustness and simiplicity across tasks
 
 <h2> Different Types of Tokenization Algorithms </h2>
 
