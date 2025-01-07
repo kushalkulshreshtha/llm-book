@@ -21,7 +21,7 @@ and many more including ChatGPT and Gemini
    C. Represent the original sentence based on the numerical representation depending presence of the word in sentence (1 if the word exists, 0 if not)
 
 **Limitation**
-A. Final representation is just a bag of word without any sementaic meaning E.g. "Tiger ate rabbit" and "Rabbit ate tiger" would essentially be the same sentences
+A. Final representation is just a bag of word without any sementaic meaning E.g. "Tiger ate rabbit" and "Rabbit ate tiger" would essentially have similar representation
 B. Introduces high dimensional (dimension = dicrtionary size) sparse vectors.
 C. Does not capture semantics (cosine similarity between 2 word vectors will always be 0).
 D. Similar words are treated differently (tiger and tigers are similar but will be totally different in representation)
@@ -107,7 +107,7 @@ Instead of using just the encoder’s final hidden state (`h3`), the context vec
 
 c1 = α11h1 + α12h2 + α13h3
 
-- `αij` represents the attention weight for the decoder’s hidden state at time `t=1` with respect to the encoder’s hidden state at position `j`.
+- `αij` represents the attention weight for the decoder’s hidden state at time `t=i` with respect to the encoder’s hidden state at position `j`.
 
 2. **Calculating Attention Weights:**  
 - A similarity score is computed between the current decoder hidden state (`s1`) and each encoder hidden state (`hi`):  
@@ -122,7 +122,8 @@ c1 = α11h1 + α12h2 + α13h3
 
 3. **Using the Context Vector:**  
 The context vector is combined with the decoder hidden state to generate the next output:  
-s2 = DecoderRNN(s1, y1, c1) y2 = softmax(Linear(s2))
+s2 = DecoderRNN(s1, y1, c1) <br>
+y2 = softmax(Linear(s2))
 
 
 ## Example for Context:
@@ -189,7 +190,7 @@ Think of searching for a book in a library:
   ```
 - Scale the score:  
   ```
-  score_scaled = score / sqrt(d_k)
+  score_scaled = score / sqrt(d_k) where d_k is dimension of weight matrix
   ```
 - Normalize using softmax to get attention weights.  
 
